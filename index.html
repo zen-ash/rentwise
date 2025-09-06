@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentWise – Student Housing Comparator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>RentWise</h1>
+      <p class="tagline">Compare student apartments by price, distance, rating and amenities</p>
+    </header>
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search by name" aria-label="Search by apartment name" />
+      <input type="number" id="max-rent" placeholder="Max rent ($)" aria-label="Maximum rent" />
+      <input type="number" id="min-rating" min="0" max="5" step="0.1" placeholder="Min rating" aria-label="Minimum rating" />
+      <select id="beds" aria-label="Number of beds">
+        <option value="">Beds</option>
+        <option value="1">1 bed</option>
+        <option value="2">2 beds</option>
+        <option value="3">3 beds</option>
+      </select>
+      <label class="checkbox">
+        <input type="checkbox" id="pets" /> Pets allowed
+      </label>
+      <select id="sort" aria-label="Sort by">
+        <option value="value">Sort: Value</option>
+        <option value="price">Sort: Price</option>
+        <option value="distance">Sort: Distance</option>
+        <option value="rating">Sort: Rating</option>
+      </select>
+    </div>
+
+    <main id="cards" class="cards"></main>
+    <div id="count" class="count"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
